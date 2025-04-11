@@ -1,0 +1,9 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/api/*"]
+  },
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com https://brave-field-0c1f8911e.6.azurestaticapps.net; img-src 'self' data: https://movieposters45.blob.core.windows.net https://api.qrserver.com; connect-src 'self' https://cineniche-backend.azurewebsites.net;"
+  }
+}

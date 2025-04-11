@@ -1,0 +1,228 @@
+/* Ensure full height for login container */
+.login-container {
+    display: flex;
+    height: 100vh;
+    background-color: #121111;
+  }
+  
+  /* Left Section */
+  .left-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 40px;
+    position: relative;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #00bfb3;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1; /* Makes sure it takes up full available space */
+    margin: 100px 0;
+    position: relative;
+  }
+  
+  .welcome-text {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  /* Image container */
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  /* Ensures the image touches the bottom */
+    margin-top: auto; /* Pushes the image to the bottom */
+  }
+  
+  .welcome-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image fills the space without distorting */
+  }
+  
+  /* Right Section */
+  .right-section {
+    width: 50%;
+    background-color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .login-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 40px;
+  }
+  
+  .login-header {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-label {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  
+  .input-icon {
+    color: #8f8f8f;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .form-input {
+    flex: 1;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .password-toggle {
+    color: #8f8f8f;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .login-button {
+    width: 100%;
+    background-color: #048ca4;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #037a8f;
+  }
+  
+  .divider {
+    padding: 0 10px;
+    color: #8f8f8f;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #e0e0e0;
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .signup-button {
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-button:hover {
+    background-color: #e8e8e8;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .left-section,
+    .right-section {
+      width: 100%;
+    }
+  
+    .left-section {
+      flex: 0 0 auto;
+      padding: 40px 20px;
+    }
+  
+    .welcome-text {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  
+    .login-form-container {
+      padding: 0 20px;
+    }
+  }

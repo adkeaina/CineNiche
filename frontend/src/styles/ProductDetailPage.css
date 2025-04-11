@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.movie-page {
+  background: linear-gradient(135deg, #018fa6 0%, #e4e801 100%);
+  min-height: 100vh;
+  width: 100%;
+  
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.movie-detail-container {
+  display: flex;
+  gap: 48px;
+  padding: 48px;
+  color: #fff;
+}
+
+.movie-detail-container * {
+  color: #fff;
+}
+
+.movie-detail-content {
+  display: flex;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.movie-meta {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.rating-toggle {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:not(.active):hover {
+  border: 2px solid #038fa6;
+  outline: none;
+}
+
+.toggle-btn.active {
+  background-color: #038fa6;
+  color: #fff;
+  border-color: #038fa6;
+}
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.star {
+  width: 45px;
+  height: 41px;
+  background-color: #fff;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star.filled {
+  background-color: #e5e900;
+}
+
+.star:hover ~ .star {
+  background-color: #fff;
+}
+
+.movie-description {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  max-width: 800px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 16px;
+}
+
+.detail-label {
+  font-weight: 500;
+  min-width: 100px;
+  font-size: 20px;
+}
+
+.detail-value {
+  flex: 1;
+  font-size: 20px;
+}
+
+.movie-poster-size {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.movie-poster-size img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* New Genres Section */
+.section-header {
+  text-align: left;
+  color: white;
+  font-size: 20px; /* Match detail-label font size */
+  font-weight: 500; /* Match font weight of .detail-label */
+  padding: 0 48px;
+  margin: 40px 0 16px;
+}
+
+.movie-genres {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 48px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.genre-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.genre-pill {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #008ea6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.genre-pill.selected {
+  background-color: #008ea6;
+  color: white;
+}
+
+.more-like-this {
+  padding: 0 48px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .movie-detail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-info {
+    width: 100%;
+  }
+
+  .movie-poster-size {
+    width: 300px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-detail-container {
+    padding: 24px;
+  }
+
+  .movie-title {
+    font-size: 36px;
+  }
+
+  .star {
+    width: 35px;
+    height: 32px;
+  }
+
+  .section-header {
+    font-size: 24px;
+    padding: 0 24px;
+  }
+
+  .movie-genres {
+    padding: 0 24px;
+  }
+
+  .genre-pill {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .more-like-this {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-title {
+    font-size: 28px;
+  }
+
+  .movie-meta,
+  .movie-description {
+    font-size: 16px;
+  }
+
+  .star {
+    width: 25px;
+    height: 23px;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 16px;
+  }
+
+  .recommendation-section {
+  padding: 0 48px;
+  margin-top: 60px; /* More spacing from Genres */
+}
+
+}
+
+.more-like-this-carousel {
+  background-color: #000 !important;
+  padding: 48px;
+  color: #fff;
+}
+
+.more-like-this-carousel .section-title {
+  color: #fff;
+}
+

@@ -1,0 +1,119 @@
+.confirmation-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fdfdfd;
+}
+
+.signup-left-section {
+  flex: 1;
+  background-color: #121111;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute the space between elements */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Using the same styles as signup-left-section from SignUpPage.css */
+.confirmation-container .signup-left-section {
+  flex: 1;
+  background-color: #121111;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmation-container .back-button {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.confirmation-container .welcome-text {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center; /* Center the text */
+  margin-top: 40px; /* Ensure some space at the top */
+}
+
+
+.confirmation-container .centered-image {
+  width: 600px; /* Adjust the size as needed */
+  height: auto;
+  margin-top: auto; /* Push the image to the bottom */
+}
+
+.confirmation-right-section {
+  flex: 1;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.confirmation-content {
+  max-width: 400px;
+}
+
+.confirmation-title {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.confirmation-message {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.confirmation-right-section .login-button {
+  background-color: #048ca4;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 60px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirmation-right-section .login-button:hover {
+  background-color: #037089;
+}
+
+@media (max-width: 768px) {
+  .confirmation-container {
+    flex-direction: column;
+  }
+
+  .confirmation-left-section,
+  .confirmation-right-section {
+    padding: 40px 20px;
+  }
+
+  .welcome-text {
+    font-size: 36px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .confirmation-title {
+    font-size: 28px;
+  }
+}

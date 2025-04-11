@@ -1,0 +1,10 @@
+.idea/
+backend/CineNiche.API/bin/
+backend/CineNiche.API/obj/
+backend/CineNiche.API/Properties/launchSettings.json
+backend/CineNiche.API/appsettings.json
+backend/CineNiche.API/appsettings.Development.json
+.vs/
+.vscode/
+.DS_Store
+backend/CineNiche.API/publish/

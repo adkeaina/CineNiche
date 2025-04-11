@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.home-view-container {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.home-view-header {
+  position: fixed; /* changed from sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(18, 17, 17, 0.90);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.search-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.user-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.home-view-content {
+  background-color: #121111;
+}
+
+/* Featured Show Section */
+.featured-show {
+  margin-top: 80px; /* NEW */
+  height: 700px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  background-image: url("/images/jaws.jpg");
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-content {
+  color: #fff;
+}
+
+.featured-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.view-movie-btn {
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #018fa6;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.view-movie-btn:hover {
+  background-color: #016d80;
+}
+
+/* Categories Section */
+.categories-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+.categories-container {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.category-btn {
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  background-color: #018fa6;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #016d80;
+}
+
+/* Recommendation Sections */
+.recommendation-section {
+  padding: 20px 40px;
+  margin-top: 30px;
+}
+
+.recommendation-section:first-of-type {
+  background-color: #018fa6;
+}
+
+.recommendation-section:first-of-type .section-title {
+  color: #fff;
+}
+
+.section-title {
+  color: #018fa6;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.movie-row {
+  height: fit-content;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.movie-poster {
+  height: 280px;
+  background-color: #333;
+  background-image: url("/imgs/movie-placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-details {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-view-header {
+    padding: 15px 20px;
+  }
+
+  .featured-show {
+    height: 300px;
+    padding: 20px;
+  }
+
+  .featured-title {
+    font-size: 36px;
+  }
+
+  .categories-container {
+    justify-content: flex-start;
+  }
+
+  .recommendation-section {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-show {
+    height: 250px;
+  }
+
+  .featured-title {
+    font-size: 30px;
+  }
+
+}
+
+.biggah {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
